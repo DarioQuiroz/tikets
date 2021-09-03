@@ -12,6 +12,11 @@
                     <input type="hidden" id="usu_id" name="usu_id">
 
                     <div class="form-group">
+                        <label class="form-label" for="usu_nom">Empresa</label>
+                        <input type="text" class="form-control" id="Empresa" name="Empresa" placeholder="Ingrese Nombre" required>
+                    </div>
+
+                    <div class="form-group">
                         <label class="form-label" for="usu_nom">Nombre</label>
                         <input type="text" class="form-control" id="usu_nom" name="usu_nom" placeholder="Ingrese Nombre" required>
                     </div>

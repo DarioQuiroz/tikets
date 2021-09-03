@@ -18,28 +18,13 @@ $(document).ready(function(){
             onPaste: function (e) {
                 console.log("Text detect...");
             }
-        },
-        toolbar: [
-            ['style', ['bold', 'italic', 'underline', 'clear']],
-            ['font', ['strikethrough', 'superscript', 'subscript']],
-            ['fontsize', ['fontsize']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['height', ['height']]
-        ]
+        }
     });
 
     $('#tickd_descripusu').summernote({
         height: 400,
         lang: "es-ES",
-        toolbar: [
-            ['style', ['bold', 'italic', 'underline', 'clear']],
-            ['font', ['strikethrough', 'superscript', 'subscript']],
-            ['fontsize', ['fontsize']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['height', ['height']]
-        ]
+   
     });  
 
     $('#tickd_descripusu').summernote('disable');
@@ -174,6 +159,8 @@ function listardetalle(tick_id){
     $.post("../../controller/ticket.php?op=mostrar", { tick_id : tick_id }, function (data) {
         data = JSON.parse(data);
         $('#lblestado').html(data.tick_estado);
+        $('#lblestado1').html(data.tick_estado);
+        $('#lblnomusuario1').html(data.Empresa);
         $('#lblnomusuario').html(data.usu_nom +' '+data.usu_ape);
         $('#lblfechcrea').html(data.fech_crea);
         
