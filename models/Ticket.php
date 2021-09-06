@@ -95,6 +95,7 @@ class Ticket extends Conectar
                 tm_ticket.usu_asig,
                 tm_ticket.fech_asig,
                 tm_usuario.usu_nom,
+                tm_usuario.Empresa,
                 tm_usuario.usu_ape,
                 tm_categoria.cat_nom
                 FROM 
@@ -119,6 +120,7 @@ class Ticket extends Conectar
                 td_ticketdetalle.fech_crea,
                 tm_usuario.usu_nom,
                 tm_usuario.usu_ape,
+                tm_usuario.Empresa,
                 tm_usuario.rol_id
                 FROM 
                 td_ticketdetalle

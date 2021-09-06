@@ -109,6 +109,7 @@ switch ($_GET["op"]) {
             } else {
                 $sub_array[] = '<span class="label label-pill label-danger">Cerrado</span>';
             }
+            $sub_array[] = $row["Empresa"];
 
             $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_crea"]));
 
@@ -204,7 +205,7 @@ switch ($_GET["op"]) {
                 } else {
                     $output["tick_estado"] = '<span class="label label-pill label-danger">Cerrado</span>';
                 }
-
+                $sub_array[] = $row["Empresa"];
                 $output["tick_estado_texto"] = $row["tick_estado"];
 
                 $output["fech_crea"] = date("d/m/Y H:i:s", strtotime($row["fech_crea"]));
