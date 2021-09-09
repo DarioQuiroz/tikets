@@ -117,7 +117,7 @@ $(document).on("click","#btnenviar", function(){
 
 $(document).on("click","#btncerrarticket", function(){
     swal({
-        title: "HelpDesk",
+        title: "Tickets",
         text: "Esta seguro de Cerrar el Ticket?",
         type: "warning",
         showCancelButton: true,
