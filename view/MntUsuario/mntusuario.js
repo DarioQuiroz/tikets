@@ -22,7 +22,7 @@ function guardaryeditar(e){
             $('#usuario_data').DataTable().ajax.reload();
 
             swal({
-                title: "HelpDesk!",
+                title: "Tickets!",
                 text: "Completado.",
                 type: "success",
                 confirmButtonClass: "btn-success"
@@ -103,7 +103,7 @@ function editar(usu_id){
 
 function eliminar(usu_id){
     swal({
-        title: "HelpDesk",
+        title: "Tickets",
         text: "Esta seguro de Eliminar el registro?",
         type: "error",
         showCancelButton: true,
@@ -121,7 +121,7 @@ function eliminar(usu_id){
             $('#usuario_data').DataTable().ajax.reload();	
 
             swal({
-                title: "HelpDesk!",
+                title: "Tickets!",
                 text: "Registro Eliminado.",
                 type: "success",
                 confirmButtonClass: "btn-success"
