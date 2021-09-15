@@ -12,7 +12,7 @@
                     <input type="hidden" id="usu_id" name="usu_id">
 
                     <div class="form-group">
-                        <label class="form-label" for="usu_nom">Empresa</label>
+                        <label class="form-label" for="usu_Emp">Empresa</label>
                         <input type="text" class="form-control" id="Empresa" name="Empresa" placeholder="Ingrese Nombre" required>
                     </div>
 

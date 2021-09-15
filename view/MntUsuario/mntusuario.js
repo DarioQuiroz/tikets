@@ -2,13 +2,13 @@ var tabla;
 
 function init(){
     $("#usuario_form").on("submit",function(e){
-        guardaryeditar(e);	
+        guardaryeditar(e);  
     });
 }
 
 function guardaryeditar(e){
     e.preventDefault();
-	var formData = new FormData($("#usuario_form")[0]);
+    var formData = new FormData($("#usuario_form")[0]);
     $.ajax({
         url: "../../controller/usuario.php?op=guardaryeditar",
         type: "POST",
@@ -22,7 +22,7 @@ function guardaryeditar(e){
             $('#usuario_data').DataTable().ajax.reload();
 
             swal({
-                title: "Tickets!",
+                title: "SySRed!",
                 text: "Completado.",
                 type: "success",
                 confirmButtonClass: "btn-success"
@@ -39,7 +39,7 @@ $(document).ready(function(){
         "searching": true,
         lengthChange: false,
         colReorder: true,
-        buttons: [		          
+        buttons: [                
                 'copyHtml5',
                 'excelHtml5',
                 'csvHtml5',
@@ -48,9 +48,9 @@ $(document).ready(function(){
         "ajax":{
             url: '../../controller/usuario.php?op=listar',
             type : "post",
-            dataType : "json",						
+            dataType : "json",                      
             error: function(e){
-                console.log(e.responseText);	
+                console.log(e.responseText);    
             }
         },
         "bDestroy": true,
@@ -103,7 +103,7 @@ function editar(usu_id){
 
 function eliminar(usu_id){
     swal({
-        title: "Tickets",
+        title: "SySRed",
         text: "Esta seguro de Eliminar el registro?",
         type: "error",
         showCancelButton: true,
@@ -118,10 +118,10 @@ function eliminar(usu_id){
 
             }); 
 
-            $('#usuario_data').DataTable().ajax.reload();	
+            $('#usuario_data').DataTable().ajax.reload();   
 
             swal({
-                title: "Tickets!",
+                title: "SySRed!",
                 text: "Registro Eliminado.",
                 type: "success",
                 confirmButtonClass: "btn-success"
