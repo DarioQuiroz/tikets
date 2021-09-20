@@ -65,6 +65,7 @@ switch ($_GET["op"]) {
                 $sub_array[] = '<span class="label label-pill label-danger">Cerrado</span>';
             }
             $sub_array[] = $row["Empresa"];
+
             $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_crea"]));
 
             if ($row["fech_asig"] == null) {
