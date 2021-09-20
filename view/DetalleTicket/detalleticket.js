@@ -168,6 +168,11 @@ function listardetalle(tick_id){
 
         $('#cat_nom').val(data.cat_nom);
         $('#tick_titulo').val(data.tick_titulo);
+
+
+        $('#tick_Usuario').val(data.tick_Usuario);
+
+
         $('#tickd_descripusu').summernote ('code',data.tick_descrip);
 
         console.log( data.tick_estado_texto);

@@ -79,9 +79,9 @@ class Usuario extends Conectar
     {
         $conectar = parent::conexion();
         parent::set_names();
-        $sql = "call sp_d_usuario_01(?)";
+        $sql = "DELETE* FROM `tm_usuario` WHERE `tm_usuario`.`usu_id` = $usu_id";
         $sql = $conectar->prepare($sql);
-        $sql->bindValue(1, $usu_id);
+        //$sql->bindValue(1, $usu_id);
         $sql->execute();
         return $resultado = $sql->fetchAll();
     }

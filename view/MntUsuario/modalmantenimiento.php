@@ -13,7 +13,7 @@
 
                     <div class="form-group">
                         <label class="form-label" for="usu_Emp">Empresa</label>
-                        <input type="text" class="form-control" id="Empresa" name="Empresa" placeholder="Ingrese Nombre" required>
+                        <input type="text" class="form-control" id="usu_Emp" name="usu_Emp" placeholder="Ingrese Nombre" required>
                     </div>
 
                     <div class="form-group">

@@ -57,6 +57,15 @@ if (isset($_SESSION["usu_id"])) {
               </fieldset>
             </div>
 
+
+            <div class="col-lg-6">
+              <fieldset class="form-group">
+                <label class="form-label semibold" for="tick_Usuario">Usuario</label>
+                <input type="text" class="form-control" id="tick_Usuario" name="tick_Usuario" readonly>
+              </fieldset>
+            </div>
+
+
             <div class="col-lg-12">
               <fieldset class="form-group">
                 <label class="form-label semibold" for="tick_titulo">Documentos Adicionales</label>

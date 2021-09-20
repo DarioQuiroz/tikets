@@ -56,7 +56,7 @@ if (isset($_SESSION["usu_id"])) {
 							<div class="col-lg-6">
 								<fieldset class="form-group">
 									<label class="form-label semibold" for="tick_Usuario">Nombre de usuario</label>
-									<input type="datefmt_localtimetext" class="form-control" id="tick_Usuario" name="tick_Usuario" value="<?php echo $_SESSION["usu_nom"] ?> <?php echo $_SESSION["usu_ape"] ?>">
+									<input type="datefmt_localtimetext" class="form-control" id="tick_Usuario" name="tick_Usuario" placeholder="Nombre">
 								</fieldset>
 							</div>
 
