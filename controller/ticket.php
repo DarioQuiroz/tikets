@@ -64,6 +64,8 @@ switch ($_GET["op"]) {
             } else {
                 $sub_array[] = '<span class="label label-pill label-danger">Cerrado</span>';
             }
+            $sub_array[] = $row["tick_descrip"];
+
             $sub_array[] = $row["Empresa"];
 
             $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_crea"]));
@@ -99,9 +101,9 @@ switch ($_GET["op"]) {
     case "listar":
         $datos = $ticket->listar_ticket();
         $data = array();
-        $sub_array = array();
-        foreach ($datos as $row) {
 
+        foreach ($datos as $row) {
+            $sub_array = array();
             $sub_array[] = $row["tick_id"];
             $sub_array[] = $row["cat_nom"];
             $sub_array[] = $row["tick_titulo"];
@@ -111,6 +113,8 @@ switch ($_GET["op"]) {
             } else {
                 $sub_array[] = '<span class="label label-pill label-danger">Cerrado</span>';
             }
+            $sub_array[] = $row["tick_descrip"];
+
             $sub_array[] = $row["Empresa"];
 
             $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_crea"]));

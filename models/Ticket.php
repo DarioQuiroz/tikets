@@ -95,6 +95,7 @@ class Ticket extends Conectar
                 tm_ticket.tick_titulo,
                 tm_ticket.tick_descrip,
                 tm_ticket.tick_estado,
+                tm_ticket.tick_descrip,
                 tm_ticket.fech_crea,
                 tm_ticket.usu_asig,
                 tm_ticket.fech_asig,

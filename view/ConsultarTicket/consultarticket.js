@@ -8,6 +8,7 @@ function init(){
     });
 }
 
+
 $(document).ready(function(){
 
     $.post("../../controller/usuario.php?op=combo", function (data) {
@@ -18,6 +19,7 @@ $(document).ready(function(){
         tabla=$('#ticket_data').dataTable({
             "aProcessing": true,
             "aServerSide": true,
+        
             dom: 'Bfrtip',
             "searching": true,
             lengthChange: false,
@@ -39,6 +41,13 @@ $(document).ready(function(){
             },
             "ordering": false,
             "bDestroy": true,
+            "columnDefs": [
+                {
+                    "targets": [ 1 ],
+                    "visible": false,
+                    "searchable": false
+                }
+            ],
             "responsive": true,
             "bInfo":true,
             "iDisplayLength": 11,
@@ -72,6 +81,7 @@ $(document).ready(function(){
         tabla=$('#ticket_data').dataTable({
             "aProcessing": true,
             "aServerSide": true,
+       
             dom: 'Bfrtip',
             "searching": true,
             lengthChange: false,
@@ -93,7 +103,14 @@ $(document).ready(function(){
             "bDestroy": true,
             "responsive": true,
             "bInfo":true,
-            "iDisplayLength": 11,
+            "columnDefs": [
+                {
+                    "targets": [ 4 ],
+                    "visible": false,
+                    "searchable": false
+                }
+            ],
+            "iDisplayLength": 10,
             "autoWidth": false,
             "language": {
                 "sProcessing":     "Procesando...",
