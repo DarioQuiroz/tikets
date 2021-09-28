@@ -56,6 +56,14 @@ switch ($_GET["op"]) {
         foreach ($datos as $row) {
             $sub_array = array();
             $sub_array[] = $row["tick_id"];
+
+            $sub_array[] = date("d/m/Y ", strtotime($row["fech_crea"]));
+
+            if ($row["fech_asig"] == null) {
+                $sub_array[] = '<span class="label label-pill label-default">Sin Asignar</span>';
+            } else {
+                $sub_array[] = date("d/m/Y ", strtotime($row["fech_asig"]));
+            }
             $sub_array[] = $row["cat_nom"];
             $sub_array[] = $row["tick_titulo"];
 
@@ -68,12 +76,11 @@ switch ($_GET["op"]) {
 
             $sub_array[] = $row["Empresa"];
 
-            $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_crea"]));
 
             if ($row["fech_asig"] == null) {
                 $sub_array[] = '<span class="label label-pill label-default">Sin Asignar</span>';
             } else {
-                $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_asig"]));
+                $sub_array[] = date("d/m/Y ", strtotime($row["fech_asig"]));
             }
 
             if ($row["usu_asig"] == null) {
@@ -105,6 +112,14 @@ switch ($_GET["op"]) {
         foreach ($datos as $row) {
             $sub_array = array();
             $sub_array[] = $row["tick_id"];
+            $sub_array[] = date("d/m/Y ", strtotime($row["fech_crea"]));
+
+
+            if ($row["fech_asig"] == null) {
+                $sub_array[] = '<span class="label label-pill label-default">Sin Asignar</span>';
+            } else {
+                $sub_array[] = date("d/m/Y ", strtotime($row["fech_asig"]));
+            }
             $sub_array[] = $row["cat_nom"];
             $sub_array[] = $row["tick_titulo"];
 
@@ -117,13 +132,7 @@ switch ($_GET["op"]) {
 
             $sub_array[] = $row["Empresa"];
 
-            $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_crea"]));
 
-            if ($row["fech_asig"] == null) {
-                $sub_array[] = '<span class="label label-pill label-default">Sin Asignar</span>';
-            } else {
-                $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_asig"]));
-            }
 
             if ($row["usu_asig"] == null) {
                 $sub_array[] = '<a onClick="asignar(' . $row["tick_id"] . ');"><span class="label label-pill label-warning">Sin Asignar</span></a>';
@@ -178,7 +187,7 @@ switch ($_GET["op"]) {
                 </header>
                 <div class="activity-line-action-list">
                     <section class="activity-line-action">
-                        <div class="time"><?php echo date("H:i:s", strtotime($row["fech_crea"])); ?></div>
+                        <div class="time"><?php echo date("", strtotime($row["fech_crea"])); ?></div>
                         <div class="cont">
                             <div class="cont-in">
                                 <p>
@@ -200,6 +209,15 @@ switch ($_GET["op"]) {
         if (is_array($datos) == true and count($datos) > 0) {
             foreach ($datos as $row) {
                 $output["tick_id"] = $row["tick_id"];
+                $sub_array[] = date("d/m/Y ", strtotime($row["fech_crea"]));
+
+
+                if ($row["fech_asig"] == null) {
+                    $sub_array[] = '<span class="label label-pill label-default">Sin Asignar</span>';
+                } else {
+                    $sub_array[] = date("d/m/Y ", strtotime($row["fech_asig"]));
+                }
+
                 $output["usu_id"] = $row["usu_id"];
                 $output["cat_id"] = $row["cat_id"];
 
@@ -217,7 +235,7 @@ switch ($_GET["op"]) {
                 $sub_array[] = $row["Empresa"];
                 $output["tick_estado_texto"] = $row["tick_estado"];
 
-                $output["fech_crea"] = date("d/m/Y H:i:s", strtotime($row["fech_crea"]));
+                $output["fech_crea"] = date("d/m/Y ", strtotime($row["fech_crea"]));
                 $output["usu_nom"] = $row["usu_nom"];
                 $output["usu_ape"] = $row["usu_ape"];
                 $output["Empresa"] = $row["Empresa"];

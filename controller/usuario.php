@@ -8,7 +8,7 @@ switch ($_GET["op"]) {
         if (empty($_POST["usu_id"])) {
             $usuario->insert_usuario($_POST["usu_Emp"], $_POST["usu_nom"], $_POST["usu_ape"], $_POST["usu_correo"], $_POST["usu_pass"], $_POST["rol_id"]);
         } else {
-            $usuario->update_usuario($_POST["usu_id"], $_POST["usu_nom"], $_POST["usu_ape"], $_POST["usu_correo"], $_POST["usu_pass"], $_POST["rol_id"]);
+            $usuario->update_usuario($_POST["usu_id"], $_POST["usu_Emp"], $_POST["usu_nom"], $_POST["usu_ape"], $_POST["usu_correo"], $_POST["usu_pass"], $_POST["rol_id"]);
         }
         break;
 

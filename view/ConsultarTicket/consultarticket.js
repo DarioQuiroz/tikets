@@ -43,7 +43,7 @@ $(document).ready(function(){
             "bDestroy": true,
             "columnDefs": [
                 {
-                    "targets": [ 1 ],
+                    "targets": [ 6 ],
                     "visible": false,
                     "searchable": false
                 }
@@ -105,7 +105,7 @@ $(document).ready(function(){
             "bInfo":true,
             "columnDefs": [
                 {
-                    "targets": [ 4 ],
+                    "targets": [ 6 ],
                     "visible": false,
                     "searchable": false
                 }

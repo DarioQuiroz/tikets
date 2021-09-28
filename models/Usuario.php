@@ -79,9 +79,9 @@ class Usuario extends Conectar
     {
         $conectar = parent::conexion();
         parent::set_names();
-        $sql = "DELETE* FROM `tm_usuario` WHERE `tm_usuario`.`usu_id` = $usu_id";
+        $sql = "UPDATE tm_usuario SET est='0', fech_elim=now() where usu_id=?";
         $sql = $conectar->prepare($sql);
-        //$sql->bindValue(1, $usu_id);
+        $sql->bindValue(1, $usu_id);
         $sql->execute();
         return $resultado = $sql->fetchAll();
     }
@@ -90,7 +90,7 @@ class Usuario extends Conectar
     {
         $conectar = parent::conexion();
         parent::set_names();
-        $sql = "SELECT * FROM tm_usuario";
+        $sql = "SELECT * FROM tm_usuario where est='1'";
         $sql = $conectar->prepare($sql);
         $sql->execute();
         return $resultado = $sql->fetchAll();

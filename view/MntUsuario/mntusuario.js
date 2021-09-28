@@ -121,7 +121,7 @@ function eliminar(usu_id){
             $('#usuario_data').DataTable().ajax.reload();   
 
             swal({
-                title: "HelpDesk!",
+                title: "Sysred!",
                 text: "Registro Eliminado.",
                 type: "success",
                 confirmButtonClass: "btn-success"
